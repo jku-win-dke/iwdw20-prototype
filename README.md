@@ -1,9 +1,9 @@
 # 19th International Workshop on Digital-forensics and Watermarking 2020
 ## Digital Watermarking of Personal Health Data for Data Leakage Detection
-### Proof-of-Concept Prototype
-#### Installation Guide
+## Proof-of-Concept Prototype
+## Installation Guide
 The prerequisite to execute the prototype is a set up database. Either the following database setup is used or the connections in the DatabaseService class must be adapted. The PostgreSQL database needs to be installed locally and be using the port 5432. Also, there must be a database called “watermarking”. The login data must be the user “postgres” with the password “admin”. In addition, the tables must be created according to the SQL script below. For the sake of simplicity, we do not use foreign keys, because we assume that the consistency of the data is checked beforehand. It should be noted that we do not store the sequence of (time, value) points as measurements but we store the sequence of measurements including their metadata in the measurements field of the fragment table.
-##### SQL Script
+### SQL Script
 CREATE TABLE fragment (
 <br>device_id text,
 <br>measurements jsonb,
@@ -32,9 +32,9 @@ CREATE TABLE fragment (
 <br>number_of_ranges integer,
 <br>CONSTRAINT usability_constraint_pkey PRIMARY KEY (type, unit)
 <br>)
-#### User Guide
+## User Guide
 After the database is set up, the prototype can be executed as java program or as jar file. As java program, the ProgramUI class is used to execute simulators and the “files” folder in the project is used for the data. The prototype can be packaged into a jar file by running the maven install command. The resulting jar file is put into the “C:/temp” directory. In this case, the folder used for the data is the “C:/temp/files” folder. Also make sure that the “C:/temp/files” folder contains the test data file. The jar file can be executed in the command line or in batch files by java -jar C:/temp/prototype-1.jar. This basic prototype execution shows the possible commands which are also provided together with the configurable parameters below.
-##### Command Line Commands
+### Command Line Commands
 -reset -table -fragment
 <br>-reset -table -request
 <br>-reset -table -usability_constraint
@@ -58,7 +58,7 @@ After the database is set up, the prototype can be executed as java program or a
 <br>-attack -collusion [datasetName1] ... [datasetNameN]
 <br>
 <br>-detect [datasetName] [fragmentSimilarityThreshold] [watermarkSimilarityThreshold] [numberOfColluders]
-##### Configurable Parameters
+### Configurable Parameters
 [dataUserId]: data user identifier as integer
 <br>[datasetName]: dataset name as string
 <br>[decimalDigit]: decimal digit as integer
