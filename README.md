@@ -59,7 +59,7 @@ After the database is set up, the prototype can be executed as java program or a
 <br>
 <br>-detect [datasetName] [fragmentSimilarityThreshold] [watermarkSimilarityThreshold] [numberOfColluders]
 ##### Configurable Parameters
-<br>[dataUserId]: data user identifier as integer
+[dataUserId]: data user identifier as integer
 <br>[datasetName]: dataset name as string
 <br>[decimalDigit]: decimal digit as integer
 <br>[deviceId]: device identifier as string
