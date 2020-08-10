@@ -1,5 +1,5 @@
 # 19th International Workshop on Digital-forensics and Watermarking 2020
-## Digital Watermarking of Personal Health Data for Data Leakage Detection
+## Towards Informed Watermarking of Personal Health Sensor Data for Data Leakage Detection
 ## Proof-of-Concept Prototype
 ## Installation Guide
 The prerequisite to execute the prototype is a set up database. Either the following database setup is used or the connections in the DatabaseService class must be adapted. The PostgreSQL database needs to be installed locally and be using the port 5432. Also, there must be a database called “watermarking”. The login data must be the user “postgres” with the password “admin”. In addition, the tables must be created according to the SQL script below. For the sake of simplicity, we do not use foreign keys, because we assume that the consistency of the data is checked beforehand. It should be noted that we do not store the sequence of (time, value) points as measurements but we store the sequence of measurements including their metadata in the measurements field of the fragment table.
